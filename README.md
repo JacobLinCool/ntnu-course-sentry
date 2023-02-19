@@ -1,0 +1,1 @@
+# NTNU Course Sentry

@@ -1,0 +1,12 @@
+auth:
+    username: YOUR_USERNAME
+    password: YOUR_PASSWORD
+
+targets:
+    - "0512" # 教育社會學（教）的「開課序號」
+
+settings:
+    interval: 60 # seconds
+
+notifications:
+    discord: DISCORD_WEBHOOK_URL

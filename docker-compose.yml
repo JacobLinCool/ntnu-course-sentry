@@ -1,0 +1,13 @@
+version: "3.9"
+name: "NTNU Course Sentry"
+
+services:
+    app:
+        build:
+            context: .
+            target: sentry
+        image: jacoblincool/ntnu-course-sentry
+        environment:
+            - DEBUG=cli,sentry
+        volumes:
+            - ./config.yml:/config.yml
