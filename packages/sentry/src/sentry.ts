@@ -187,6 +187,12 @@ export class Sentry extends EventEmitter {
 	protected course_names = new Map<string, string>();
 	protected running = false;
 	protected async watch() {
+		const hour = Math.floor(Date.now() / (1000 * 60 * 60)) % 24;
+		if (hour >= 16 || hour < 1) {
+			log("zzz 00:00 ~ 09:00 (UTC+8)");
+			return;
+		}
+
 		const page = this.page;
 		if (!page) {
 			throw new Error("page not initialized");
