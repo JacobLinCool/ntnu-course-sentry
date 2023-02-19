@@ -11,3 +11,4 @@ services:
             - DEBUG=cli,sentry
         volumes:
             - ./config.yml:/config.yml
+        restart: unless-stopped
