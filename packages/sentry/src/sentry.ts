@@ -154,6 +154,8 @@ export class Sentry extends EventEmitter {
 						page.getByRole("button", { name: "登入" }).click(),
 					]);
 
+					await page.waitForTimeout(1000);
+
 					if (page.url().includes("LoginCheckCtrl")) {
 						throw new Error("login failed");
 					}
