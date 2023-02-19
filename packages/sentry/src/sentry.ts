@@ -168,12 +168,14 @@ export class Sentry extends EventEmitter {
 
 			await page.getByRole("button", { name: "下一頁 (開始選課)" }).click();
 			await page.waitForLoadState("networkidle");
+			await page.waitForTimeout(3000);
 
 			await page
 				.frameLocator("#stfseldListDo")
 				.getByRole("button", { name: "查詢課程" })
 				.click();
 			await page.waitForLoadState("networkidle");
+			await page.waitForTimeout(3000);
 		} finally {
 			this.mutex.down();
 		}
