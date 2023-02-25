@@ -17,6 +17,8 @@ export const ConfigSchema = z.object({
 	settings: z
 		.object({
 			interval: z.number().optional(),
+			strict: z.boolean().optional(),
+			evil: z.boolean().optional(),
 		})
 		.optional(),
 	notifications: z

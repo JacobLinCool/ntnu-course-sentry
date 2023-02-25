@@ -39,6 +39,8 @@ export class Sentry extends EventEmitter {
 			targets: config.targets ?? [],
 			settings: {
 				interval: config.settings?.interval ?? 60,
+				strict: config.settings?.strict ?? false,
+				evil: config.settings?.evil ?? false,
 			},
 			notifications: {
 				discord: config.notifications?.discord ?? "",
@@ -193,9 +195,10 @@ export class Sentry extends EventEmitter {
 	protected course_names = new Map<string, string>();
 	protected running = false;
 	protected async watch() {
-		const hour = Math.floor(Date.now() / (1000 * 60 * 60)) % 24;
-		if (hour >= 16 || hour < 1) {
-			log("zzz 00:00 ~ 09:00 (UTC+8)");
+		const hour = ((Math.floor(Date.now()) + 8 * 60 * 60 * 1000) / (1000 * 60 * 60)) % 24;
+		const lazy = hour >= 0.05 && hour <= 8.95;
+		if (lazy && hour % 1 > 1 / 60) {
+			log("lazy mode");
 			return;
 		}
 
@@ -210,6 +213,10 @@ export class Sentry extends EventEmitter {
 		this.running = true;
 
 		if (!(await this.authenticated)) {
+			if (this.config.settings.strict) {
+				console.error("not authenticated! Force exit because strict mode is enabled");
+				process.exit(1);
+			}
 			console.warn("not authenticated! you may want to restart the service");
 			return;
 		}
