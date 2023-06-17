@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@jacoblincool/rate-limiter": "^1.0.0",
 		"chalk": "^4.1.2",
-		"commander": "^10.0.0",
+		"commander": "^11.0.0",
 		"debug": "^4.3.4",
 		"js-yaml": "^4.1.0",
 		"node-fetch": "^2.6.7",
