@@ -1,0 +1,11 @@
+targets:
+    - "1234" # serial number of the course
+    - "2345" # serial number of the course
+
+settings:
+    year: 112 # required
+    term: 1 # required
+    interval: 15 # in seconds, required
+
+notification:
+    discord: https://discord.com/api/webhooks/<CHANNEL>/<TOKEN>

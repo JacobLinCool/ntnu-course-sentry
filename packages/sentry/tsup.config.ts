@@ -4,7 +4,7 @@ export default defineConfig(() => ({
 	entry: ["src/index.ts"],
 	outDir: "dist",
 	target: "node16",
-	format: ["cjs"],
+	format: ["esm"],
 	shims: true,
 	clean: true,
 	splitting: false,

@@ -2,26 +2,13 @@ import YAML from "js-yaml";
 import { z } from "zod";
 
 export const ConfigSchema = z.object({
-	auth: z.object({
-		username: z.string(),
-		password: z.string(),
-		solver_token: z.string().optional(),
+	targets: z.array(z.string()),
+	settings: z.object({
+		year: z.number(),
+		term: z.number(),
+		interval: z.number(),
 	}),
-	endpoint: z
-		.object({
-			entrypoints: z.array(z.string()).optional(),
-			solver: z.string().optional(),
-		})
-		.optional(),
-	targets: z.array(z.string()).optional(),
-	settings: z
-		.object({
-			interval: z.number().optional(),
-			strict: z.boolean().optional(),
-			evil: z.boolean().optional(),
-		})
-		.optional(),
-	notifications: z
+	notification: z
 		.object({
 			discord: z.string().url().optional(),
 		})

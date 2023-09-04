@@ -1,5 +1,4 @@
 version: "3.9"
-name: "NTNU Course Sentry"
 
 services:
     app:
@@ -8,7 +7,7 @@ services:
             target: sentry
         image: jacoblincool/ntnu-course-sentry
         environment:
-            - DEBUG=cli,sentry
+            - DEBUG=cli,sentry*
         volumes:
             - ./config.yml:/config.yml
         restart: unless-stopped
