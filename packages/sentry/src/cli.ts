@@ -1,6 +1,6 @@
-import fs from "node:fs";
 import { program } from "commander";
 import debug from "debug";
+import fs from "node:fs";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 import { ChiefSentry } from "./chief";

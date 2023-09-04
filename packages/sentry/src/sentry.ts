@@ -1,7 +1,7 @@
-import EventEmitter from "node:events";
 import debug from "debug";
-import { CourseListFetcher } from "ntnu-course-list";
+import EventEmitter from "node:events";
 import type { CourseJSON, NumberLike } from "ntnu-course-list";
+import { CourseListFetcher } from "ntnu-course-list";
 
 export class Sentry extends EventEmitter {
 	protected log: debug.Debugger;
