@@ -1,14 +1,15 @@
 {
 	"private": true,
-	"name": "sentry",
+	"name": "ntnu-course-sentry",
 	"description": "",
 	"version": "2.0.0",
 	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
 	"license": "MIT",
 	"type": "module",
 	"keywords": [],
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/lib.js",
+	"types": "dist/lib.d.ts",
+	"bin": "dist/index.js",
 	"files": [
 		"dist"
 	],
@@ -42,8 +43,5 @@
 	"bugs": {
 		"url": "https://github.com/JacobLinCool/ntnu-course-sentry/issues"
 	},
-	"homepage": "https://jacoblincool.github.io/ntnu-course-sentry",
-	"typedoc": {
-		"entryPoint": "./src/index.ts"
-	}
+	"homepage": "https://jacoblincool.github.io/ntnu-course-sentry"
 }

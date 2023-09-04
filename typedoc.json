@@ -1,0 +1,6 @@
+{
+	"entryPoints": ["packages/*"],
+	"name": "NTNU Course Sentry",
+	"entryPointStrategy": "packages",
+	"includeVersion": true
+}

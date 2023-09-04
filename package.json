@@ -8,7 +8,7 @@
 		"format": "prettier --write --ignore-path .gitignore **/*.{ts,json,yaml,yml}",
 		"test": "vitest",
 		"changeset": "changeset",
-		"build:docs": "typedoc --entryPointStrategy packages --out docs packages/*"
+		"build:docs": "typedoc --out docs"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
