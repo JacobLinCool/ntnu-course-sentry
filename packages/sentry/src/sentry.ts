@@ -30,7 +30,7 @@ export class Sentry extends EventEmitter {
 		const watch = this.watch.bind(this);
 
 		watch();
-		this.timer = setTimeout(watch, this.interval);
+		this.timer = setTimeout(watch, this.interval * 1000);
 	}
 
 	public stop(): void {
@@ -78,7 +78,7 @@ export class Sentry extends EventEmitter {
 				this.log(err.message);
 			}
 		} finally {
-			this.timer = setTimeout(this.watch.bind(this), this.interval);
+			this.timer = setTimeout(this.watch.bind(this), this.interval * 1000);
 		}
 	}
 
