@@ -65,7 +65,7 @@ export class Sentry extends EventEmitter {
 			if (!this._cached || this._cached.選修人數 !== course.選修人數) {
 				this.emit("change", course);
 
-				if (course.選修人數 === course.限修人數) {
+				if (course.選修人數 >= course.限修人數) {
 					this.emit("full", course);
 				} else if (course.選修人數 < course.限修人數) {
 					this.emit("available", course);
