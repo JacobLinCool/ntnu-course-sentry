@@ -6,26 +6,24 @@
 	"scripts": {
 		"prepare": "husky install",
 		"format": "prettier --write --ignore-path .gitignore **/*.{ts,json,yaml,yml}",
-		"test": "jest --coverage",
+		"test": "vitest",
 		"changeset": "changeset",
-		"build:docs": "typedoc --entryPointStrategy packages --out docs packages/*"
+		"build:docs": "typedoc --out docs"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.0",
-		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
-		"@types/jest": "^29.4.0",
-		"@types/node": "^18.14.0",
+		"@changesets/cli": "^2.26.2",
+		"@types/node": "^20.5.9",
 		"husky": "^8.0.3",
-		"jest": "^29.4.3",
-		"lint-staged": "^13.1.2",
-		"prettier": "^2.8.4",
-		"serve": "^14.2.0",
-		"ts-jest": "^29.0.5",
-		"tsup": "^6.6.3",
-		"tsx": "^3.12.3",
-		"typedoc": "^0.23.25",
-		"typescript": "^4.9.5"
+		"lint-staged": "^14.0.1",
+		"prettier": "^3.0.3",
+		"prettier-plugin-organize-imports": "^3.2.3",
+		"serve": "^14.2.1",
+		"tsup": "^7.2.0",
+		"tsx": "^3.12.8",
+		"typedoc": "^0.25.0",
+		"typescript": "^5.2.2",
+		"vitest": "^0.34.3"
 	},
 	"lint-staged": {
 		"*.{ts,js,json,yaml,yml}": [
@@ -39,5 +37,6 @@
 	"bugs": {
 		"url": "https://github.com/JacobLinCool/ntnu-course-sentry/issues"
 	},
-	"homepage": "https://jacoblincool.github.io/ntnu-course-sentry"
+	"homepage": "https://jacoblincool.github.io/ntnu-course-sentry",
+	"packageManager": "pnpm@8.7.1"
 }

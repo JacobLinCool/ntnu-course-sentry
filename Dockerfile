@@ -6,7 +6,7 @@ COPY . .
 RUN npm pkg delete scripts.prepare
 RUN pnpm i && pnpm rebuild && pnpm -r build && rm -rf node_modules && pnpm i --prod
 
-FROM jacoblincool/playwright:chromium-light as sentry
+FROM node:alpine as sentry
 
 COPY --from=builder /app /app
 WORKDIR /app
