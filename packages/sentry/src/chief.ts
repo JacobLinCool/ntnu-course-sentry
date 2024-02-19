@@ -14,6 +14,10 @@ export class ChiefSentry {
 		}
 	}
 
+	public list() {
+		return this.subordinates.map((s) => ({ target: s.target, cached: s.cached }));
+	}
+
 	public add(target: string): boolean {
 		if (this.subordinates.some((s) => s.target === target)) {
 			return false;

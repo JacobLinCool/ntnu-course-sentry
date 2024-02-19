@@ -19,22 +19,22 @@
 		"build:docs": "typedoc --out docs src"
 	},
 	"dependencies": {
-		"commander": "^11.0.0",
+		"commander": "^12.0.0",
 		"debug": "^4.3.4",
 		"js-yaml": "^4.1.0",
 		"node-fetch": "^3.3.2",
 		"ntnu-course-list": "^0.0.0",
-		"zod": "^3.22.2",
-		"zod-validation-error": "^1.5.0"
+		"zod": "^3.22.4",
+		"zod-validation-error": "^3.0.2"
 	},
 	"devDependencies": {
-		"@types/debug": "^4.1.8",
-		"@types/js-yaml": "^4.0.5",
-		"@types/node-fetch": "^2.6.4",
-		"tsup": "^7.2.0",
-		"type-fest": "^4.3.1",
-		"typedoc": "^0.25.0",
-		"typescript": "^5.2.2"
+		"@types/debug": "^4.1.12",
+		"@types/js-yaml": "^4.0.9",
+		"@types/node-fetch": "^2.6.11",
+		"tsup": "^8.0.2",
+		"type-fest": "^4.10.2",
+		"typedoc": "^0.25.8",
+		"typescript": "^5.3.3"
 	},
 	"repository": {
 		"type": "git",

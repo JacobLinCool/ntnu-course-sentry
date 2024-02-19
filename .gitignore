@@ -138,3 +138,6 @@ docs
 
 config.yml
 packages/sentry/config.yml
+
+.svelte-kit
+!packages/outpost/src/lib

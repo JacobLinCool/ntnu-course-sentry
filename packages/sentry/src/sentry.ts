@@ -20,6 +20,10 @@ export class Sentry extends EventEmitter {
 		this.fetcher = new CourseListFetcher();
 	}
 
+	public get cached(): CourseJSON | undefined {
+		return this._cached;
+	}
+
 	public start(): void {
 		if (this.timer) {
 			this.log("start: timer already exists, ignore");

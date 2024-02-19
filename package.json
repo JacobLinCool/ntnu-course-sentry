@@ -4,29 +4,29 @@
 	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
 	"license": "MIT",
 	"scripts": {
-		"prepare": "husky install",
-		"format": "prettier --write --ignore-path .gitignore **/*.{ts,json,yaml,yml}",
+		"prepare": "husky",
+		"format": "prettier --ignore-path .gitignore --write .",
 		"test": "vitest",
 		"changeset": "changeset",
 		"build:docs": "typedoc --out docs"
 	},
 	"devDependencies": {
-		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.2",
-		"@types/node": "^20.5.9",
-		"husky": "^8.0.3",
-		"lint-staged": "^14.0.1",
-		"prettier": "^3.0.3",
-		"prettier-plugin-organize-imports": "^3.2.3",
+		"@changesets/changelog-github": "^0.5.0",
+		"@changesets/cli": "^2.27.1",
+		"@types/node": "^20.11.19",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"prettier-plugin-organize-imports": "^3.2.4",
 		"serve": "^14.2.1",
-		"tsup": "^7.2.0",
-		"tsx": "^3.12.8",
-		"typedoc": "^0.25.0",
-		"typescript": "^5.2.2",
-		"vitest": "^0.34.3"
+		"tsup": "^8.0.2",
+		"tsx": "^4.7.1",
+		"typedoc": "^0.25.8",
+		"typescript": "^5.3.3",
+		"vitest": "^1.3.0"
 	},
 	"lint-staged": {
-		"*.{ts,js,json,yaml,yml}": [
+		"*.{ts,js,json,yaml,yml,svelte,html,css}": [
 			"prettier --write"
 		]
 	},
@@ -38,5 +38,5 @@
 		"url": "https://github.com/JacobLinCool/ntnu-course-sentry/issues"
 	},
 	"homepage": "https://jacoblincool.github.io/ntnu-course-sentry",
-	"packageManager": "pnpm@8.7.1"
+	"packageManager": "pnpm@8.15.3"
 }
