@@ -34,7 +34,6 @@ export class Sentry extends EventEmitter {
 		const watch = this.watch.bind(this);
 
 		watch();
-		this.timer = setTimeout(watch, this.interval * 1000);
 	}
 
 	public stop(): void {
