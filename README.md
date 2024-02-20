@@ -20,7 +20,6 @@ settings:
 
 notification:
     discord: https://discord.com/api/webhooks/<CHANNEL>/<TOKEN>
-
 ```
 
 > By default, if there is any course available, it will notify through the stdout. If you want to use Discord, you can set the `discord` field in the `notification` section, however, this is not required.
